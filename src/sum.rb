@@ -2,8 +2,8 @@
 
 begin
   result = Hash.new
-  while line = STDIN.gets
-    line.chomp
+  while gets
+    line = $_.chomp
     items = line.split(",")
     if result.has_key?(items[0])
       result[items[0]] += items[1].to_i
