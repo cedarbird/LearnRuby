@@ -2,18 +2,12 @@
 
 begin
   result = Hash.new
+  result.default = 0
   while gets
-    line = $_.chomp
-    items = line.split(",")
-    if result.has_key?(items[0])
-      result[items[0]] += items[1].to_i
-    else
-      result[items[0]] = items[1].to_i
-    end
-  end
-  result.each do |key, value|
-    puts "#{key},#{value}"
-  end
+    items = $_.chomp.split(",")
+    result[items[0]] += items[1].to_i
+   end
+  result.each { |k, v| puts "#{k},#{v}" }
 rescue => e
   puts %Q(class=[#{e.class}] message=[#{e.message}])
   puts e.backtrace
