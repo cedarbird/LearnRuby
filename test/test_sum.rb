@@ -1,4 +1,4 @@
-#!/bin/env ruby
+#!/usr/bin/env ruby
 
 require 'minitest'
 require 'stringio'
@@ -6,6 +6,7 @@ require 'stringio'
 MiniTest::Unit.autorun
 
 class TestSum < MiniTest::Unit::TestCase
+
   def setup
   end
   # teardown はあまり使わない
@@ -50,4 +51,3 @@ _END_
     assert_equal expired_result, $stdout.string
   end
 end
-
