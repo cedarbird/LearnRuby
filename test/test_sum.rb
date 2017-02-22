@@ -16,7 +16,7 @@ class TestSum < MiniTest::Unit::TestCase
   def test_sum
 
     #input data
-    input = <<_END_
+    input = <<-EOS
 16:46:38,4
 16:46:38,2
 16:46:38,3
@@ -33,16 +33,16 @@ class TestSum < MiniTest::Unit::TestCase
 16:46:41,7
 16:46:41,7
 16:46:42,8
-_END_
+EOS
 
     #expied data
-    expired_result = <<_END_
+    expired_result = <<-EOS
 16:46:38,15
 16:46:39,25
 16:46:40,18
 16:46:41,14
 16:46:42,8
-_END_
+EOS
 
     #puts Dir.pwd
     $stdin = (StringIO.new(input))
